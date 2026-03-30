@@ -34,22 +34,173 @@
         .btn-nav-login { color: white; text-decoration: none; padding: 7px 16px; border-radius: 8px; font-size: 0.83rem; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); transition: all 0.2s; }
         .btn-nav-register { background: linear-gradient(135deg, #6366f1, #a855f7); color: white; text-decoration: none; padding: 7px 16px; border-radius: 8px; font-size: 0.83rem; font-weight: 700; box-shadow: 0 4px 14px rgba(99,102,241,0.4); transition: all 0.2s; }
 
+        /* HERO */
         .page-hero {
-            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-            padding: 48px 48px;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            padding: 0 80px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .page-hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 48px;
+            min-height: 300px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-hero-left { padding: 48px 0; }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(212,160,23,0.12);
+            border: 1px solid rgba(212,160,23,0.3);
+            color: #f59e0b;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 5px 16px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+        }
+
+        .page-hero-left h1 {
+            color: white;
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            line-height: 1.15;
+        }
+
+        .page-hero-left h1 span {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-hero-left p {
+            color: rgba(255,255,255,0.55);
+            font-size: 0.9rem;
+            line-height: 1.75;
+            max-width: 360px;
+            margin-bottom: 16px;
+        }
+
+        .hero-ar {
+            font-size: 1rem;
+            color: #f59e0b;
+            opacity: 0.6;
+            direction: rtl;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .page-hero-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .hero-art-panel {
+            width: 340px;
+            height: 220px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-art-circle {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .hero-art-circle:nth-child(1) {
+            width: 220px;
+            height: 220px;
+            border: 1px solid rgba(212,160,23,0.12);
+        }
+
+        .hero-art-circle:nth-child(2) {
+            width: 160px;
+            height: 160px;
+            border: 1px solid rgba(99,102,241,0.2);
+        }
+
+        .hero-art-circle:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(168,85,247,0.15));
+            border: 1px solid rgba(99,102,241,0.3);
+        }
+
+        .hero-art-text {
+            position: relative;
+            z-index: 2;
             text-align: center;
         }
-        .page-hero h1 { color: white; font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
-        .page-hero p { color: rgba(255,255,255,0.7); font-size: 0.95rem; }
 
+        .hero-art-main {
+            font-size: 3.5rem;
+            color: rgba(212,160,23,0.9);
+            direction: rtl;
+            line-height: 1;
+            margin-bottom: 8px;
+            text-shadow: 0 0 40px rgba(212,160,23,0.3);
+        }
+
+        .hero-art-sub {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .hero-float-card {
+            position: absolute;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-float-card:nth-of-type(1) { top: 10px; right: 0; }
+        .hero-float-card:nth-of-type(2) { bottom: 10px; left: 0; }
+
+        .float-icon { font-size: 1.2rem; }
+        .float-title { font-size: 0.78rem; font-weight: 700; color: white; }
+        .float-sub { font-size: 0.68rem; color: rgba(255,255,255,0.4); }
+
+        /* KONTAKT */
         .kontakt-wrapper { max-width: 1000px; margin: 0 auto; padding: 48px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-
-        .info-card { background: white; border-radius: 14px; padding: 20px; margin-bottom: 14px; display: flex; align-items: flex-start; gap: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
+        .info-card { background: white; border-radius: 14px; padding: 20px; margin-bottom: 14px; display: flex; align-items: flex-start; gap: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .info-card:hover { box-shadow: 0 4px 12px rgba(79,70,229,0.1); border-color: rgba(79,70,229,0.2); }
         .info-icon { font-size: 1.6rem; flex-shrink: 0; }
         .info-title { font-size: 0.88rem; font-weight: 700; color: #0f172a; margin-bottom: 3px; }
         .info-text { font-size: 0.83rem; color: #475569; }
         .info-sub { font-size: 0.75rem; color: #94a3b8; margin-top: 2px; }
-
         .form-card { background: white; border-radius: 14px; padding: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
         .form-title { font-size: 1.1rem; font-weight: 800; color: #0f172a; margin-bottom: 20px; }
         .form-group { margin-bottom: 16px; }
@@ -72,7 +223,6 @@
 </head>
 <body>
 
-    {{-- NAV --}}
     <nav class="main-nav">
         <a href="{{ url('/') }}" class="nav-logo">
             <span class="logo-en">🌙 ArapskiLearn</span>
@@ -115,8 +265,39 @@
 
     {{-- HERO --}}
     <div class="page-hero">
-        <h1>📬 Kontaktirajte nas</h1>
-        <p>Tu smo za sva vaša pitanja i prijedloge</p>
+        <div class="page-hero-content">
+            <div class="page-hero-left">
+                <div class="hero-tag">📬 Kontakt</div>
+                <h1>Kontaktirajte <span>nas</span></h1>
+                <p>Tu smo za sva vaša pitanja, prijedloge i sugestije. Odgovaramo u roku od 24 sata!</p>
+                <div class="hero-ar">تواصل معنا — Povežimo se</div>
+            </div>
+            <div class="page-hero-right">
+                <div class="hero-art-panel">
+                    <div class="hero-art-circle"></div>
+                    <div class="hero-art-circle"></div>
+                    <div class="hero-art-circle"></div>
+                    <div class="hero-art-text">
+                        <div class="hero-art-main"></div>
+                        <div class="hero-art-sub"></div>
+                    </div>
+                    <div class="hero-float-card">
+                        <div class="float-icon">⭐</div>
+                        <div>
+                            <div class="float-title">Ocjena 4.9/5</div>
+                            <div class="float-sub">Prosječna ocjena</div>
+                        </div>
+                    </div>
+                    <div class="hero-float-card">
+                        <div class="float-icon">📚</div>
+                        <div>
+                            <div class="float-title">500+ časova</div>
+                            <div class="float-sub">Održano do sada</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     {{-- SADRŽAJ --}}
@@ -196,7 +377,6 @@
         </div>
     </div>
 
-    {{-- FOOTER --}}
     <footer>
         <div>
             <div class="footer-logo-en">🌙 ArapskiLearn</div>
@@ -218,14 +398,11 @@
         const email = document.getElementById('email').value.trim();
         const tema = document.getElementById('tema').value;
         const poruka = document.getElementById('poruka').value.trim();
-
         document.querySelectorAll('.form-error').forEach(el => el.style.display = 'none');
-
         if (ime.length < 3) { document.getElementById('ime-error').style.display = 'block'; valid = false; }
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('email-error').style.display = 'block'; valid = false; }
         if (!tema) { document.getElementById('tema-error').style.display = 'block'; valid = false; }
         if (poruka.length < 10) { document.getElementById('poruka-error').style.display = 'block'; valid = false; }
-
         if (valid) {
             document.getElementById('uspjeh').style.display = 'block';
             document.getElementById('kontaktForm').reset();

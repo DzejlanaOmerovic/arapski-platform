@@ -729,8 +729,7 @@
             <span class="ar">أهلا وسهلا</span>
         </a>
         <div class="nav-center">
-            <a href="#kursevi">Kursevi</a>
-            <a href="#koraci">Kako početi</a>
+            <a href="#kursevi">Početna</a>
             <a href="{{ route('obavjestenja') }}">Obavještenja</a>
             <a href="{{ route('kontakt') }}">Kontakt</a>
         </div>
