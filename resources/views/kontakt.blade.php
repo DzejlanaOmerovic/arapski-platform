@@ -246,6 +246,8 @@
                     <a href="{{ route('admin.pending-users') }}">Zahtjevi</a>
                     <a href="{{ route('admin.users') }}">Korisnici</a>
                 @endif
+                <a href="{{ route('profile.edit') }}">⚙️ Profil</a>
+
             @endauth
         </div>
         <div class="nav-user">

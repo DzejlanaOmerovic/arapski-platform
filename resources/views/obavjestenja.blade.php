@@ -254,16 +254,9 @@
                 <div class="hero-tag">📢 Novosti</div>
                 <h1>Obavještenja i <span>vijesti</span></h1>
                 <p>Pratite najnovije vijesti, promocije i događaje na našoj platformi.</p>
-                <div class="hero-ar">الأخبار والإعلانات</div>
             </div>
             <div class="page-hero-right">
                 <div class="hero-art-panel">
-                    <div class="hero-art-circle"></div>
-                    <div class="hero-art-circle"></div>
-                    <div class="hero-art-circle"></div>
-                    <div class="hero-art-text">
-                        <div class="hero-art-main"></div>
-                        <div class="hero-art-sub">ArapskiLearn</div>
                     </div>
                     <div class="hero-float-card">
                         <div class="float-icon">📰</div>
@@ -318,6 +311,8 @@
             <a href="{{ url('/') }}">Početna</a>
             <a href="{{ route('obavjestenja') }}">Obavještenja</a>
             <a href="{{ route('kontakt') }}">Kontakt</a>
+            <a href="{{ route('profile.edit') }}">⚙️ Profil</a>
+
         </div>
         <div class="footer-copy">© 2024 ArapskiLearn</div>
     </footer>
