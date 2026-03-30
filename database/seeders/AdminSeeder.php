@@ -10,13 +10,16 @@ class AdminSeeder extends Seeder
 {
     public function run(): void
     {
-        User::create([
-            'name'     => 'Administrator',
-            'username' => 'admin.001',
-            'email'    => 'admin@arapski.com',
-            'password' => Hash::make('Admin123!'),
-            'role'     => 'admin',
-            'status'   => 'approved',
-        ]);
+        // Kreira admina samo ako ne postoji
+        User::firstOrCreate(
+            ['email' => 'admin@arapski.com'],
+            [
+                'name'     => 'Administrator',
+                'username' => 'admin.001',
+                'password' => Hash::make('Admin123!'),
+                'role'     => 'admin',
+                'status'   => 'approved',
+            ]
+        );
     }
 }
